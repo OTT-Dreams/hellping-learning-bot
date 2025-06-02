@@ -15,13 +15,13 @@ class Bot(Client):
     def __init__(self):
         super().__init__(
             name="Bot",
-            api_hash=API_HASH,
-            api_id=APP_ID,
+            api_hash=d3aa7bec27b6e3950ac4ca2feaef516f,
+            api_id=21428181,
             plugins={
                 "root": "plugins"
             },
-            workers=TG_BOT_WORKERS,
-            bot_token=TG_BOT_TOKEN
+            workers=5673825854 5988505286,
+            bot_token=7798987800:AAGXb-kVizkA5Yp8rFDlCb0tWd0GcSGaJTE
         )
         self.LOGGER = LOGGER
 
@@ -44,13 +44,13 @@ class Bot(Client):
                 self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/CodeXBotzSupport for support")
                 sys.exit()
         try:
-            db_channel = await self.get_chat(CHANNEL_ID)
+            db_channel = await self.get_chat(-1002124990401)
             self.db_channel = db_channel
             test = await self.send_message(chat_id = db_channel.id, text = "Test Message")
             await test.delete()
         except Exception as e:
             self.LOGGER(__name__).warning(e)
-            self.LOGGER(__name__).warning(f"Make Sure bot is Admin in DB Channel, and Double check the CHANNEL_ID Value, Current Value {CHANNEL_ID}")
+            self.LOGGER(__name__).warning(f"Make Sure bot is Admin in DB Channel, and Double check the CHANNEL_ID Value, Current Value {-1002124990401}")
             self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/CodeXBotzSupport for support")
             sys.exit()
 
